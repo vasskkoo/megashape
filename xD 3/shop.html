@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<base target="_blank">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Megashape</title>
+  <link rel="stylesheet" href="./style/shop.css"/>
+  <link rel="icon" href="images/logo.png">
+</head>
+
+<body>
+  <div class="header">
+      <a href="rgrmain.html" class="logo" target="_self">MEGASHAPE</a>
+      <ul class="navlist">
+        <li><a href="aboutus.html" target="_self">Про нас</a></li>
+        <li><a href="contacts.html" target="_self">Контакти</a></li>
+        <li><a href="reviews.html" target="_self">Відгуки</a></li>
+        <li><a href="why.html" target="_self">Чому люди обирають нас?</a></li>
+      </ul>
+  </div>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+      <div class="wrapper">
+          <div id="search-container">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Я шукаю..."
+          />
+          <button id="search">Знайти</button>
+          <img src="/images/search.png" alt="">
+        </div>
+        <div id="buttons">
+          <button class="button-value" onclick="filterProduct('all')">
+          Все</button>
+          <button class="button-value" onclick="filterProduct('sneakers')">
+            Кросівки
+          </button>
+          <button class="button-value" onclick="filterProduct('suits')">
+            Спортивні костюми
+          </button>
+          <button class="button-value" onclick="filterProduct('equipment')">
+            Спортивний інвентар
+          </button>
+        </div>
+    <div id="products"></div>
+    </div>
+    </div>
+
+
+
+</div>
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+  let menu = document.querySelector(`#menu-icon`);
+  let navlist = document.querySelector(`.navlist`);
+
+  menu.onclick = () => {
+    menu.classList.toggle(`bx-x`);
+    navlist.classList.toggle(`bx-x`);
+  };
+
+</script>
+</html>
+<script src="scripts/Script.js"></script>
+</html>

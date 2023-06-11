@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<base target="_blank">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Megashape</title>
+  <link rel="stylesheet" href="./style/rgrmain.css"/>
+</head>
+<link rel="icon" href="images/logo.png">
+<body>
+
+<header>
+  <a href="rgrmain.html" class="logo" target="_self" >MEGASHAPE</a>
+  <ul class="navlist">
+    <li><a href="aboutus.html" target="_self">Про нас</a></li>
+    <li><a href="contacts.html" target="_self">Контакти</a></li>
+     <li><a href="reviews.html" target="_self">Відгуки</a></li>
+    <li><a href="why.html" target="_self">Чому люди обирають нас</a></li>
+  </ul>
+  <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<section class="sport_logo">
+  <div class="sport_logo-text">
+    <h5>№ 1 cпорт магазин</h5>
+    <h1>Megashape</h1>
+    <p>Важко зазнати невдачі, але ще гірше ніколи не намагатися досягти успіху <br>Megashape допоможе вам перемогти з найкращим обладнанням</p>
+    <a href="shop.html">Магазин</a>
+    <a href="https://megashape.com.ua/ua/" class="ctaa"><i class="ri-play-fill"></i>більше</a>
+  </div>
+
+  <div class="sport_logo-img">
+    <img src="images/main_logo.jpg" width="600" height="500">
+  </div>
+</section>
+
+<div class="icons">
+  <a href="https://www.instagram.com/undisputedqq/?next=%2F"><img src="images/instagram.png" width="30" height="30"></a>
+  <a href="https://t.me/megashape_bot"><img src="images/telegram.png" width="30" height="30"></a>
+  <a href="https://github.com/"><img src="images/github.png" width="30" height="30"></a>
+</div>
+
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+  let menu = document.querySelector(`#menu-icon`);
+  let navlist = document.querySelector(`.navlist`);
+
+  menu.onclick = () => {
+    menu.classList.toggle(`bx-x`);
+    navlist.classList.toggle(`bx-x`);
+  };
+
+  const sr = ScrollReveal({
+    distance: `65px`,
+    duration: 2600,
+    delay: 450,
+    reset: true
+  });
+
+  sr.reveal(`.sport_logo-text`,{delay:200, origin:`top`});
+  sr.reveal(`.sport_logo-img`,{delay:450, origin:`top`});
+  sr.reveal(`.icons`,{delay:500, origin:`left`});
+
+</script>
+</html>

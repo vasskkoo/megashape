@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+
+.navlist a:hover {
+    border-bottom: 2px solid white;
+}
+
+#menu-icon {
+    color: white;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.sport_logo{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    /*background: linear-gradient(245.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);*/
+    background: black;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 19%;
+}
+
+.sport_logo-text h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.sport_logo-text h1 {
+    font-family: sans-serif;
+    font-size: 90px;
+    line-height: 1;
+    color: white;
+    margin: 0 0 45px;
+}
+
+.sport_logo-text p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.sport_logo-text a {
+    display: inline-block;
+    color: white;
+    background: rebeccapurple;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.sport_logo-text a:hover {
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.sport_logo-text a.ctaa {
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+
+.sport_logo-text a.ctaa i {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.icons {
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+
+.icons img {
+    display: block;
+    margin: 26px 0;
+    transition: all .50s ease;
+}
+
+.icons img:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+
+    .icons {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    @media (max-width: 1460px) {
+        section {
+            padding: 0 12%;
+            transition: .2s;
+        }
+    }
+
+    @media (max-width: 1340px) {
+        .sport_logo-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .sport_logo-text h1 {
+            font-size: 75px;
+            margin: 0 0 30px
+        }
+
+        .sport_logo-text h5 {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (max-width: 1195px) {
+        section {
+            padding: 0 3%;
+            transition: .2s;
+        }
+
+        .sport_logo-text {
+            padding-top: 115px;
+        }
+
+        .sport_logo-img {
+            text-align: center;
+        }
+
+        .sport_logo-img img {
+            width: 560px;
+            height: auto;
+        }
+
+        .sport_logo {
+            height: 100%;
+            gap: 1rem;
+            grid-template-columns: 1fr;
+        }
+
+        .icons {
+            display: none;
+        }
+
+        @media (max-width: 680px) {
+            .sport_logo {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<base target="_blank">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Megashape</title>
+    <link rel="stylesheet" href="./style/why.css"/>
+</head>
+<link rel="icon" href="images/logo.png">
+<body>
+
+<header>
+    <a href="rgrmain.html" class="logo" target="_self">MEGASHAPE</a>
+    <ul class="navlist">
+        <li><a href="aboutus.html" target="_self">Про нас</a></li>
+        <li><a href="contacts.html" target="_self">Контакти</a></li>
+         <li><a href="reviews.html" target="_self">Відгуки</a></li>
+        <li><a href="why.html" target="_self">Чому люди обирають нас</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<section class="sport">
+    <div class="sport-text">
+        <h1>Чому люди обирають нас</h1>
+        <p>Люди обирають Megashape, тому що ми співпрацюємо з великою кількістю найкращих брендів, таких як:<br>Adidas<br>Asics<br>Puma<br>Nike<br>Reebok<br>Under Armour<br>і інші..</p>
+    </div>
+
+    <div class="sport-img">
+        <img src="images/megashape.png" width="600" height="500">
+    </div>
+</section>
+
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+    let menu = document.querySelector(`#menu-icon`);
+    let navlist = document.querySelector(`.navlist`);
+
+    menu.onclick = () => {
+        menu.classList.toggle(`bx-x`);
+        navlist.classList.toggle(`bx-x`);
+    };
+
+    const sr = ScrollReveal({
+        distance: `65px`,
+        duration: 2600,
+        delay: 450,
+        reset: true
+    });
+
+    sr.reveal(`.sport-text`, {delay: 200, origin: `top`});
+    sr.reveal(`.sport-img`, {delay: 450, origin: `top`});
+
+</script>
+</html>

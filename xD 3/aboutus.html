@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<base target="_blank">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Megashape</title>
+    <link rel="stylesheet" href="./style/aboutus.css"/>
+</head>
+<link rel="icon" href="images/logo.png">
+<body>
+
+<header>
+    <a href="rgrmain.html" class="logo" target="_self">MEGASHAPE</a>
+    <ul class="navlist">
+        <li><a href="aboutus.html" target="_self">Про нас</a></li>
+        <li><a href="contacts.html" target="_self">Контакти</a></li>
+        <li><a href="reviews.html" target="_self">Відгуки</a></li>
+        <li><a href="why.html" target="_self">Чому люди обирають нас</a></li>
+    </ul>
+    <div class="bx bx-menu" id="menu-icon"></div>
+</header>
+
+<section class="sport_logo">
+    <div class="sport_logo-text">
+        <h1>Про нас</h1>
+        <p>Megashape - інтернет-магазин, який працює з 2019 року і користується великою популярністю серед багатьох відомих спортсменів і рекордсменів.<br>Тисячі людей залишають позитивні відгуки з усього світу і віддають перевагу нам.</p>
+    </div>
+
+    <div class="sport_logo-img">
+        <img src="images/aboutus_logo.png" width="600" height="500">
+    </div>
+</section>
+
+</body>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+
+    let menu = document.querySelector(`#menu-icon`);
+    let navlist = document.querySelector(`.navlist`);
+
+    menu.onclick = () => {
+        menu.classList.toggle(`bx-x`);
+        navlist.classList.toggle(`bx-x`);
+    };
+
+    const sr = ScrollReveal({
+        distance: `65px`,
+        duration: 2600,
+        delay: 450,
+        reset: true
+    });
+
+    sr.reveal(`.sport_logo-text`, {delay: 200, origin: `top`});
+    sr.reveal(`.sport_logo-img`, {delay: 450, origin: `top`});
+
+</script>
+</html>
